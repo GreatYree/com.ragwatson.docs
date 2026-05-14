@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "c417b784c215192c",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b08e91a61a57112",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ce26ce1f9fc044ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5월 수업 내용/25.05.12.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "25.05.12"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fd69905fe2653da2",
+    "type": "split",
+    "children": [
+      {
+        "id": "c44e4c131b9485cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b4d49696cbec082",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "33e6d3abe042c73f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "a71941202bc35d06",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c5bf625ce8f31456",
+    "type": "split",
+    "children": [
+      {
+        "id": "71e2a1ff32f935ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a35523182537942f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "5월 수업 내용/25.05.07.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "25.05.07 의 백링크"
+            }
+          },
+          {
+            "id": "54e43e09d23e34cf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "5월 수업 내용/25.05.07.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "25.05.07 의 나가는 링크"
+            }
+          },
+          {
+            "id": "413eef7327516508",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "604fa1e9c3a24b37",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "cdb61bf4535d9dbc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "5월 수업 내용/25.05.07.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "25.05.07 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
+    }
+  },
+  "active": "ce26ce1f9fc044ce",
+  "lastOpenFiles": [
+    "5월 수업 내용/25.05.09.md",
+    "5월 수업 내용/25.05.12.md",
+    "Pasted image 20260511121106.png",
+    "Pasted image 20260511121052.png",
+    "5월 수업 내용/25.05.06.md",
+    "Command.txt",
+    "5월 수업 내용/25.05.07.md",
+    "5월 수업 내용/25.05.08.md",
+    "백엔드 개발/fastapi_260507.md.md",
+    "아르카나 개발/Flutterflow 프롬프트.md",
+    "아르카나 개발/Arcana_experiment.md",
+    "아르카나 개발/Arcana_article.md",
+    "Pasted image 20260508155503.png",
+    "Pasted image 20260508150942.png",
+    "Pasted image 20260508150253.png",
+    "Pasted image 20260508145501.png",
+    "Pasted image 20260508145430.png",
+    "Pasted image 20260508110049.png",
+    "Pasted image 20260508101005.png",
+    "아르카나 개발/Arcana_Agent_System.md",
+    "아르카나 개발/Arcana_experiment_system.md",
+    "아르카나 개발/Arcana_experiment_agentsystem.md",
+    "아르카나 개발/Arcana_experiment_arcana.md",
+    "아르카나 개발/experiment_arcana.md",
+    "Pasted image 20260507105930.png",
+    "백엔드 개발/gemini-code-1778134109748.md",
+    "gemini-code-1778134109748.md",
+    "백엔드 개발",
+    "새 폴더",
+    "Arcana 플랫폼 개요.md",
+    "Arcana_Agent_System.md",
+    "5월 수업 내용",
+    "아르카나 개발",
+    "아고라 개발/Arcana_Agent_System.md",
+    "아고라 개발",
+    "25.05.26.md",
+    "환영합니다!.md"
+  ]
+}
