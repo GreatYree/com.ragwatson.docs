@@ -1,0 +1,101 @@
+---
+description: React 폼/화면의 여러 useState를 단일 객체 state로 압축
+globs: frontend/**/*.{tsx,ts}
+alwaysApply: false
+---
+
+# React — useState 객체로 압축
+
+사용자가 폼·입력 상태를 여러 `useState`로 두었거나, 아래와 같은 **FormData 참조 패턴**으로 리팩터를 요청하면 적용한다.
+
+## 참조 패턴 (FormData)
+
+```tsx
+const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  const formData = new FormData(e.currentTarget);
+  const formProps = Object.fromEntries(formData.entries());
+  // ...
+};
+```
+
+## 할 일
+
+1. 관련 `useState` 문자열·불리언 등을 **하나의 state 객체**로 합친다.
+2. `input`/`textarea`에는 `name`을 두고, `onChange`에서 객체를 갱신한다.
+3. 제출 시 `FormData` 또는 객체 state를 그대로 API body로 쓸 수 있게 맞춘다.
+4. 타입이 있으면 `type FormState = { ... }`로 명시한다.
+5. 요청 범위 밖 필드·로직은 건드리지 않는다.
+
+## 권장 형태
+
+```tsx
+type SignupFormState = {
+  userID: string;
+  email: string;
+  nickname: string;
+  password: string;
+  passwordConfirm: string;
+  alertMessage: string;
+  warningMessage: string;
+};
+
+const initialForm: SignupFormState = {
+  userID: "",
+  email: "",
+  nickname: "",
+  password: "",
+  passwordConfirm: "",
+  alertMessage: "",
+  warningMessage: "",
+};
+
+const [form, setForm] = useState<SignupFormState>(initialForm);
+
+const setField = <K extends keyof SignupFormState>(
+  key: K,
+  value: SignupFormState[K],
+) => setForm((prev) => ({ ...prev, [key]: value }));
+
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const { name, value } = e.target;
+  if (name in initialForm) {
+    setField(name as keyof SignupFormState, value);
+  }
+};
+```
+
+## `window.alert` 사용 금지
+
+폼 제출·API 응답 피드백은 **브라우저 `alert()`를 쓰지 않는다.** 이미 같은 화면에 인라인 메시지 state가 있으면 `alert`는 **제거**한다.
+
+### 우선순위
+
+1. **인라인** — `form` 객체의 `warningMessage`(오류) / `alertMessage` 또는 `successMessage`(성공), `role="alert"` 박스
+2. **Toast** — 짧은 한 줄일 때 (`sonner` 등, layout에 `Toaster` 필요)
+3. **redirect** — 가입·로그인 완료 후 `router.push` + 대상 페이지 배너
+4. **Dialog** — 반드시 확인이 필요할 때만 (shadcn `Dialog`)
+
+성공 메시지에 **비밀번호·토큰** 등 민감 정보를 넣지 않는다. API의 `message` 또는 짧은 안내 문구만 표시한다.
+
+### 재사용 프롬프트 (복사용)
+
+```
+이 컴포넌트에서 window.alert를 제거해 줘.
+- 오류/성공은 form state의 warningMessage·alertMessage(또는 successMessage)와 기존 인라인 UI(role="alert")로만 표시
+- alert와 인라인이 중복이면 alert만 삭제
+- 새 alert() 추가 금지. 필요하면 toast 또는 router.push로 대체
+- useState 객체 압축 규칙은 docs/Devops/Frontend/react-usestate-object.mdc 를 따름
+```
+
+**한 줄 버전:**
+
+```
+window.alert 제거하고, form state 인라인 메시지(또는 toast/redirect)로만 피드백해 줘. alert() 신규 사용 금지.
+```
+
+## 피할 것
+
+- `window.alert` / `confirm` / `prompt`로 폼 결과 알리기
+- 무관한 컴포넌트까지 일괄 리팩터
+- `useReducer`로 과하게 바꾸기 (요청이 없으면 `useState` 객체로 충분)

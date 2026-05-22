@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5월 수업 내용/25.05.12.md",
+                "file": "Devops/Backend/PROTEIER_ERD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "25.05.12"
+              "title": "PROTEIER_ERD"
             }
           }
         ]
@@ -185,6 +185,14 @@
   },
   "active": "ce26ce1f9fc044ce",
   "lastOpenFiles": [
+    "Devops/Backend/TITANIC_ERD.md",
+    "Devops/Backend/PROTEIER_ERD.md",
+    "Devops/Backend/BACKEND_APPS_ERD.md",
+    "Devops/Backend/Arcana_FlutterFlow_Spec.md",
+    "Devops/Backend/Arcana_Agent_System.md",
+    "환영합니다!.md",
+    "Arcana_Agent_System.md",
+    "Arcana_FlutterFlow_Spec.md",
     "5월 수업 내용/25.05.09.md",
     "5월 수업 내용/25.05.12.md",
     "Pasted image 20260511121106.png",
@@ -215,12 +223,9 @@
     "백엔드 개발",
     "새 폴더",
     "Arcana 플랫폼 개요.md",
-    "Arcana_Agent_System.md",
     "5월 수업 내용",
     "아르카나 개발",
     "아고라 개발/Arcana_Agent_System.md",
-    "아고라 개발",
-    "25.05.26.md",
-    "환영합니다!.md"
+    "아고라 개발"
   ]
 }
